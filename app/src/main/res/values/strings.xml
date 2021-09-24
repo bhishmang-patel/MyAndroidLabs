@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Bhishmang\'s Android Labs</string>
     <string name="hello_message">Hello World!</string>
-    <string name="button_message">I\'m abutton</string>
+    <string name="button_message">I\'m a button</string>
+    <string name="editmessage">I\'m an EditText</string>
+    <string name="hinttext">Write something here</string>
+    <string name="checkbox">Do u like movies?</string>
+    <string name="switch_message">Can we go outside?</string>
+    <string name="radiobutton">Do u like sports?</string>
+
 </resources>
