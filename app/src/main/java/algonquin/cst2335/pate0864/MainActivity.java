@@ -74,10 +74,5 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "The width = " + width + " and height = " + height, Toast.LENGTH_LONG).show();
             }
         });
-
-
-
-
-
     }
 }
