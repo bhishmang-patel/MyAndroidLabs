@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Bhishmang\'s Android Labs</string>
-    <string name="hello_message">Hello World!</string>
-    <string name="button1">Button 1</string>
-    <string name="button2">Button 2</string>
-    <string name="button3">Button 3</string>
-    <string name="spin_message">Spin flag</string>
+    <string name="email_add">Enter your email address:</string>
+    <string name="email">Type email here</string>
+    <string name="passwd">Type your password:</string>
+    <string name="button_message">Login</string>
+    <string name="button">Call Number</string>
+    <string name="button1">Change Picture</string>
+    <string name="Text_View">Welcome back</string>
 </resources>
