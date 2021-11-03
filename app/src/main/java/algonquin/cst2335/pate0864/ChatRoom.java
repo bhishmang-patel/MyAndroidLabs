@@ -112,8 +112,7 @@ public class ChatRoom extends AppCompatActivity {
             holder.timeText.setText(messages.get(position).getTimeSent());
         }
         public int getItemViewType(int position){
-            messages.get(position).getSendOrReceive();
-            return position;
+            return messages.get(position).getSendOrReceive();
         }
         @Override
         public int getItemCount() {
