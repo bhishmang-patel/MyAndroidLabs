@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -24,11 +24,11 @@
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        app:layout_constraintTop_toBottomOf="@id/textView1"
+        app:layout_constraintTop_toBottomOf="@id/message"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -43,7 +43,7 @@
         android:layout_marginTop="5dp"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@id/textView2"
+        app:layout_constraintTop_toBottomOf="@id/time"
         tools:ignore="MissingConstraints" />
 
     <Button
