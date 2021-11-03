@@ -93,7 +93,7 @@ public class ChatRoom extends AppCompatActivity {
 
             LayoutInflater inflater = getLayoutInflater();
             int LayoutID;
-            if (viewType == 1)
+            if (viewType == 0)
                 LayoutID = R.layout.sent_message;
             else
                 LayoutID = R.layout.receive_message;
