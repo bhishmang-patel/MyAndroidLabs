@@ -27,6 +27,7 @@ public class ChatRoom extends AppCompatActivity {
     MyChatAdapter adt = new MyChatAdapter();
     TextView view, t_view;
     ArrayList <ChatMessage> messages = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +38,8 @@ public class ChatRoom extends AppCompatActivity {
         view = findViewById(R.id.message);
         t_view = findViewById(R.id.time);
 
+        MyOpenHelper opener = new MyOpenHelper();
+        
         // When Send button is clicked
         send_btn = findViewById(R.id.button1);
         send_btn.setOnClickListener(Click -> {
@@ -128,7 +131,7 @@ public class ChatRoom extends AppCompatActivity {
 
             itemView.setOnClickListener( click ->{
 
-                int position = getAbsoluteAdapterPosition();
+                int position = getAdapterPosition();
 
                 MyRowViews newRow = adt.onCreateViewHolder(null, adt.getItemViewType(position));
 
