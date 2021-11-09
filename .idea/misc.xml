@@ -3,12 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2078125" />
-        <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/layout/activity_second.xml" value="0.176" />
-        <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/layout/chatlayout.xml" value="0.2001943634596696" />
-        <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/layout/receive_message.xml" value="0.536" />
-        <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/layout/sent_message.xml" value="0.4" />
+        <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/layout/receive_message.xml" value="0.4" />
+        <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/layout/sent_message.xml" value="0.536" />
       </map>
     </option>
   </component>

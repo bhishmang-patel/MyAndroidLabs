@@ -137,25 +137,26 @@ public class ChatRoom extends AppCompatActivity {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder( ChatRoom.this );
                 builder.setMessage("Do you want to delete the message:" + messageText.getText())
-                       .setTitle("Question:")
-                       .setNegativeButton("No",(dialog, cl) -> {})
-                       .setPositiveButton("Yes",(dialog, cl) -> {
-                        ChatMessage removedMessage = messages.get(position);
-                        messages.remove(position);
-                        adt.notifyItemRemoved(position);
+                        .setTitle("Question:")
+                        .setNegativeButton("No",(dialog, cl) -> {})
+                        .setPositiveButton("Yes",(dialog, cl) -> {
+                            ChatMessage removedMessage = messages.get(position);
+                            messages.remove(position);
+                            adt.notifyItemRemoved(position);
 
-                           Snackbar.make(messageText, "You deleted message #"+ position, Snackbar.LENGTH_LONG)
-                                   .setAction("Undo", clk -> {
+                            Snackbar.make(messageText, "You deleted message #"+ position, Snackbar.LENGTH_LONG)
+                                    .setAction("Undo", clk -> {
 
-                                       messages.add(position, removedMessage);
-                                       adt.notifyItemInserted(position);
-                                   })
-                                   .show();
-                }).create().show();
+                                        messages.add(position, removedMessage);
+                                        adt.notifyItemInserted(position);
+                                    })
+                                    .show();
+                        }).create().show();
             });
             messageText = itemView.findViewById(R.id.message);
             timeText = itemView.findViewById(R.id.time);
         }
+
     }
     public class ChatMessage{
         String message;
