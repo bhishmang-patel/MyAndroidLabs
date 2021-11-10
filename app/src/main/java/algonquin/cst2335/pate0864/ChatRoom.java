@@ -30,6 +30,7 @@ public class ChatRoom extends AppCompatActivity {
     MyChatAdapter adt = new MyChatAdapter();
     TextView view, t_view;
     ArrayList <ChatMessage> messages = new ArrayList<>();
+    SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +42,10 @@ public class ChatRoom extends AppCompatActivity {
         view = findViewById(R.id.message);
         t_view = findViewById(R.id.time);
 
+
+
         MyOpenHelper opener = new MyOpenHelper(this);
-        SQLiteDatabase db = opener.getWritableDatabase();
+        db = opener.getWritableDatabase();
         
         // When Send button is clicked
         send_btn = findViewById(R.id.button1);
@@ -62,7 +65,6 @@ public class ChatRoom extends AppCompatActivity {
 
             Long newId = db.insert(MyOpenHelper.TABLE_NAME, MyOpenHelper.col_message, newRow);
             thisMessage.setId(newId);
-
 
             // adds the line in a row
             messages.add(thisMessage);
@@ -119,6 +121,7 @@ public class ChatRoom extends AppCompatActivity {
             int sendOrReceive = results.getInt(_sendCol);
             messages.add(new ChatMessage(message, sendOrReceive, timeSent, id));
         }
+
         chatList.setAdapter(adt);
         chatList.setLayoutManager(new LinearLayoutManager(this));
 
@@ -164,9 +167,9 @@ public class ChatRoom extends AppCompatActivity {
 
             itemView.setOnClickListener( click ->{
 
-                int position = getAdapterPosition();
+                int position = getAbsoluteAdapterPosition();
 
-                MyRowViews newRow = adt.onCreateViewHolder(null, adt.getItemViewType(position));
+               // MyRowViews newRow = adt.onCreateViewHolder(null, adt.getItemViewType(position));
 
                 AlertDialog.Builder builder = new AlertDialog.Builder( ChatRoom.this );
                 builder.setMessage("Do you want to delete the message:" + messageText.getText())
@@ -177,14 +180,23 @@ public class ChatRoom extends AppCompatActivity {
                         messages.remove(position);
                         adt.notifyItemRemoved(position);
 
+                           db.delete(MyOpenHelper.TABLE_NAME, " _id = ?", new String[]{
+                                   Long.toString(removedMessage.getId())});
+/*
+
+
+*/
                            Snackbar.make(messageText, "You deleted message #"+ position, Snackbar.LENGTH_LONG)
                                    .setAction("Undo", clk -> {
-
+                                       db.execSQL("Insert into " + MyOpenHelper.TABLE_NAME + " values('" + removedMessage.getId() +
+                                               "','" + removedMessage.getMessage() +
+                                               "','" + removedMessage.getSendOrReceive() +
+                                               "','" + removedMessage.getTimeSent() + "');");
                                        messages.add(position, removedMessage);
                                        adt.notifyItemInserted(position);
                                    })
                                    .show();
-                }).create().show();
+                       }).create().show();
             });
             messageText = itemView.findViewById(R.id.message);
             timeText = itemView.findViewById(R.id.time);

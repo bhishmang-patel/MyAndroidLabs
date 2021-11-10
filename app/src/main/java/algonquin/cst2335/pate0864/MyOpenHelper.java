@@ -4,12 +4,11 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
 
 public class MyOpenHelper extends SQLiteOpenHelper{
 
     public static final String name = "TheDatabase";
-    public static final int version = 1;
+    public static final int version = 2;
 
     public MyOpenHelper(Context context) {
         super(context, name, null, version);
