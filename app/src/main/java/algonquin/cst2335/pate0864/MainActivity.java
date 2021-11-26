@@ -55,12 +55,11 @@ public class MainActivity extends AppCompatActivity {
 
                 stringURL = "https://api.openweathermap.org/data/2.5/weather?q="
                             + URLEncoder.encode(cityName, "UTF-8")
-                            + "&appid=47565c755963e5a4aeba20ce90f3c0e9&Units=Metric";
+                            + "&appid=47565c755963e5a4aeba20ce90f3c0e9&units=metric";
 
                 URL url = new URL(stringURL);
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-
 
                 String text = (new BufferedReader(
                         new InputStreamReader(in, StandardCharsets.UTF_8)))
