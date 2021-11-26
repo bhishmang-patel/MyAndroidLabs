@@ -42,12 +42,12 @@ public class MainActivityTest {
     public void testFindMissingUpperCase(){
 
         // Find the edittext
-        ViewInteraction appCompatEditText = onView(withId(R.id.editText));
+        ViewInteraction appCompatEditText = onView(withId(R.id.cityTextField));
         // Type the password 123#$*
         appCompatEditText.perform(replaceText("123#$*"));
 
         // Find the button
-        ViewInteraction materialButton = onView(withId(R.id.button));
+        ViewInteraction materialButton = onView(withId(R.id.forecastButton));
         // Click the button
         materialButton.perform(click());
 
@@ -64,12 +64,12 @@ public class MainActivityTest {
     public void testFindMissingLowerCase(){
 
         // Find the edittext
-        ViewInteraction appCompatEditText = onView(withId(R.id.editText));
+        ViewInteraction appCompatEditText = onView(withId(R.id.cityTextField));
         // Type the password A@$*123
         appCompatEditText.perform(replaceText("A@$*123"));
 
         // Find the button
-        ViewInteraction materialButton = onView(withId(R.id.button));
+        ViewInteraction materialButton = onView(withId(R.id.forecastButton));
         // Click the button
         materialButton.perform(click());
 
@@ -86,12 +86,12 @@ public class MainActivityTest {
     public void testFindMissingDigits(){
 
         // Find the edittext
-        ViewInteraction appCompatEditText = onView(withId(R.id.editText));
+        ViewInteraction appCompatEditText = onView(withId(R.id.cityTextField));
         // Type the password Abc@$*
         appCompatEditText.perform(replaceText("Abc@$*"));
 
         // Find the button
-        ViewInteraction materialButton = onView(withId(R.id.button));
+        ViewInteraction materialButton = onView(withId(R.id.forecastButton));
         // Click the button
         materialButton.perform(click());
 
@@ -108,12 +108,12 @@ public class MainActivityTest {
     public void testFindMissingSpecialCharacters(){
 
         // Find the edittext
-        ViewInteraction appCompatEditText = onView(withId(R.id.editText));
+        ViewInteraction appCompatEditText = onView(withId(R.id.cityTextField));
         // Type the password Abc123
         appCompatEditText.perform(replaceText("Abc123"));
 
         // Find the button
-        ViewInteraction materialButton = onView(withId(R.id.button));
+        ViewInteraction materialButton = onView(withId(R.id.forecastButton));
         // Click the button
         materialButton.perform(click());
 
@@ -130,12 +130,12 @@ public class MainActivityTest {
     public void testComplexity(){
 
         // Find the edittext
-        ViewInteraction appCompatEditText = onView(withId(R.id.editText));
+        ViewInteraction appCompatEditText = onView(withId(R.id.cityTextField));
         // Type the password Abc@*45
         appCompatEditText.perform(replaceText("Abc@*45"));
 
         // Find the button
-        ViewInteraction materialButton = onView(withId(R.id.button));
+        ViewInteraction materialButton = onView(withId(R.id.forecastButton));
         // Click the button
         materialButton.perform(click());
 
