@@ -96,15 +96,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
 
-                FileOutputStream fOut = null;
-                try {
-                    fOut = openFileOutput( iconName + ".png", Context.MODE_PRIVATE);
-                    image.compress(Bitmap.CompressFormat.PNG, 100, fOut);
-                    fOut.flush();
-                    fOut.close();
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
 
                 runOnUiThread( ( ) -> {
                     TextView tv = findViewById(R.id.temp);
