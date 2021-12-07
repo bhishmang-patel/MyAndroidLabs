@@ -4,11 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/layout-sw600dp/empty_layout.xml" value="0.1" />
-        <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/layout/activity_main.xml" value="0.8" />
+        <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/layout/chatlayout.xml" value="0.264" />
         <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/layout/details_layout.xml" value="0.152" />
         <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/layout/empty_layout.xml" value="0.1296875" />
         <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/layout/layout-sw600dp.xml" value="0.1" />
+        <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/layout/popout_layout.xml" value="0.1" />
+        <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/menu/main_activity_actions.xml" value="0.4" />
+        <entry key="..\:/Users/Bhishmang Patel/AndroidStudioProjects/BhishmangsAndroidLabs/app/src/main/res/menu/popout_layout.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+<androidx.appcompat.widget.Toolbar
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    android:id="@+id/toolbar"/>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout">
+
+ <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+     
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -25,7 +45,7 @@
 
 
     <TextView
-        android:id="@+id/temp"
+        android:id="@+id/currentTemp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Temp goes here"
@@ -64,5 +84,18 @@
         android:layout_height="wrap_content"
         android:text="Description goes here"
         android:visibility="invisible" />
+
+ </LinearLayout>
+
+   <com.google.android.material.navigation.NavigationView
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       android:id="@+id/popout_menu"
+       android:layout_gravity="start"
+       android:fitsSystemWindows="true"
+       app:headerLayout="@layout/popout_header"
+       app:menu="@menu/main_activity_actions"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
 
 </LinearLayout>
